@@ -1,9 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import useGetAllPost from '@/hooks/useGetAllPost';
 import { useSelector } from 'react-redux';
+import Post from './Post';
 
-// Lazy load the Post component
-const Post = lazy(() => import('./Post'));
 
 const Posts = () => {
   // Call the custom hook to fetch posts
