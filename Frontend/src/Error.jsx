@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import error from './assets/error.png';
+import img from "./assets/a1.svg"
 
 const Error = () => {
     const navigate = useNavigate();
@@ -11,7 +11,7 @@ const Error = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-black">
-            <img src={error} alt="Error" className="w-1/2 mb-8" /> {/* Error image */}
+            <img src={img} alt="Error" className="w-1/2 mb-8" /> {/* Error image */}
             <div className="text-center">
                 <h1 className="text-9xl font-bold text-red-500">404</h1>
                 <h2 className="mt-4 text-2xl font-semibold text-white">Page Not Found</h2>

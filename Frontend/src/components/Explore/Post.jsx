@@ -225,7 +225,7 @@ const Post = ({ post }) => {
         <span className="font-medium">{post.author?.username}</span>{" "}
         {post.caption}
       </p>
-      {comment.length > 0 && (
+      {comment.length > 0 &&  (
         <div className="comments-section">
           {comment.map((c, index) => (
             <p key={index} className="text-sm text-gray-400">
