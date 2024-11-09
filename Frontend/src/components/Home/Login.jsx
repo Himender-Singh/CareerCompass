@@ -28,7 +28,7 @@ const Login = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        `http://localhost:8000/api/v1/user/login`,
+        `https://careercompass-1dh2.onrender.com/user/login`,
         input,
         {
           headers: {

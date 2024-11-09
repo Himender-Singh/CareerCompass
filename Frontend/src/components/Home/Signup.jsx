@@ -24,7 +24,7 @@ const Signup = () => {
     console.log("Request body:", input); // Log input before sending
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/v1/user/register",
+        "https://careercompass-1dh2.onrender.com/user/register",
         input,
         {
           headers: {
