@@ -10,7 +10,7 @@ const useGetChat = () => {
     const fetchChats = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/v1/chat/all",
+          "https://careercompass-1-sq77.onrender.com/chat/all",
           {
             withCredentials: true, // Ensure credentials are sent with the request
           }

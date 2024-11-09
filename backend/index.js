@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 const corsOptions = {
-    origin: ["https://careercompass-1dh2.onrender.com", process.env.URL],
+    origin: ["https://careercompass-1-sq77.onrender.com", process.env.URL],
     credentials: true
 };
 app.use(cors(corsOptions));

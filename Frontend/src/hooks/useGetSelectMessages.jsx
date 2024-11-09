@@ -18,7 +18,7 @@ const useGetSelectMessages = () => {
     const fetchMessages = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/v1/chat/${select._id}`,
+          `https://careercompass-1-sq77.onrender.com/chat/${select._id}`,
           {
             withCredentials: true,
           }

@@ -10,7 +10,7 @@ const useGetTask = () => {
     useEffect(() => {
         const fetchTask = async () => {
             try {
-                const res = await axios.get('http://localhost:8000/api/v1/task/getUserTask', {
+                const res = await axios.get('https://careercompass-1-sq77.onrender.com/task/getUserTask', {
                     withCredentials: true,
                 });
                 // console.log(res);

@@ -60,7 +60,7 @@ const Session = () => {
 
     try {
       const res = await axios.post(
-        "https://careercompass-1dh2.onrender.com/task/addTask",
+        "https://careercompass-1-sq77.onrender.com/task/addTask",
         input,
         {
           headers: {

@@ -28,7 +28,7 @@ import About from "./components/Home/About";
 import Error from "./Error";
 
 const persist = persistStore(store);
-export const server = "http://localhost:8000/api/v1";
+export const server = "https://careercompass-1-sq77.onrender.com";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

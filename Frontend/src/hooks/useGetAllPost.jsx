@@ -13,7 +13,7 @@ const useGetAllPost = () => {
         const fetchAllPost = async () => {
             setLoading(true); 
             try {
-                const res = await axios.get('http://localhost:8000/api/v1/post/all', { withCredentials: true });
+                const res = await axios.get('https://careercompass-1-sq77.onrender.com/post/all', { withCredentials: true });
                 if (res.data.success) { 
                     dispatch(setPosts(res.data.posts));
                 } else {

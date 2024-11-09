@@ -29,7 +29,7 @@ const Post = ({ post }) => {
   const followAndUnfollowHandler = async () => {
     try {
       const res = await axios.post(
-        `https://careercompass-1dh2.onrender.com/user/followorunfollow/${post.author._id}`,
+        `https://careercompass-1-sq77.onrender.com/user/followorunfollow/${post.author._id}`,
         { userId: user._id }
       );
       setIsFollowing(!isFollowing); // Toggle follow state locally
@@ -50,7 +50,7 @@ const Post = ({ post }) => {
     try {
       const action = liked ? "dislike" : "like";
       const res = await axios.get(
-        `https://careercompass-1dh2.onrender.com/post/${post._id}/${action}`,
+        `https://careercompass-1-sq77.onrender.com/post/${post._id}/${action}`,
         { withCredentials: true }
       );
       if (res.data.success) {
@@ -81,7 +81,7 @@ const Post = ({ post }) => {
 
     try {
       const res = await axios.post(
-        `https://careercompass-1dh2.onrender.com/post/${post._id}/comment`,
+        `https://careercompass-1-sq77.onrender.com/post/${post._id}/comment`,
         { text },
         {
           headers: { "Content-Type": "application/json" },
@@ -111,7 +111,7 @@ const Post = ({ post }) => {
   const deletePostHandler = async () => {
     try {
       const res = await axios.delete(
-        `https://careercompass-1dh2.onrender.com/post/delete/${post?._id}`,
+        `https://careercompass-1-sq77.onrender.com/post/delete/${post?._id}`,
         { withCredentials: true }
       );
       if (res.data.success) {
@@ -130,7 +130,7 @@ const Post = ({ post }) => {
   const bookmarkHandler = async () => {
     try {
       const res = await axios.get(
-        `https://careercompass-1dh2.onrender.com/post/${post?._id}/bookmark`,
+        `https://careercompass-1-sq77.onrender.com/post/${post?._id}/bookmark`,
         { withCredentials: true }
       );
       if (res.data.success) {

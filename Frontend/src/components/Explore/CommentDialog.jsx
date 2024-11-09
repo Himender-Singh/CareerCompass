@@ -30,7 +30,7 @@ const CommentDialog = ({ open, setOpen }) => {
 
   const sendMessageHandler = async () => {
     try {
-      const res = await axios.post(`https://careercompass-1dh2.onrender.com/post/${selectedPost?._id}/comment`, { text }, {
+      const res = await axios.post(`https://careercompass-1-sq77.onrender.com/post/${selectedPost?._id}/comment`, { text }, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true
       });
