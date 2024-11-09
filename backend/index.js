@@ -29,6 +29,7 @@ const corsOptions = {
     credentials: true
 };
 app.use(cors(corsOptions));
+console.log(__dirname);
 
 // API routes
 app.use("/api/v1/user", userRoute);
