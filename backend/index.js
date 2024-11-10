@@ -25,8 +25,10 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 const corsOptions = {
-    origin: "https://careercompass-1-sq77.onrender.com", // Adjust if needed
-    credentials: true
+  origin: "https://careercompass-1-sq77.onrender.com",
+  methods: "GET,POST,PUT,DELETE", // Allowed HTTP methods
+  allowedHeaders: "Content-Type,Authorization",
+  credentials: true,
 };
 app.use(cors(corsOptions));
 
@@ -40,16 +42,18 @@ app.use("/api/v1/chat", chatRoute);
 // Serving static files
 app.use(express.static(path.join(__dirname, "Frontend", "dist")));
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"));
+  res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"));
 });
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(err.status || 500).json({ error: err.message || 'Something broke!' });
+  console.error(err.stack);
+  res
+    .status(err.status || 500)
+    .json({ error: err.message || "Something broke!" });
 });
 
 // Start the server
 server.listen(PORT, () => {
-    console.log(`Server listening at port ${PORT}`);
+  console.log(`Server listening at port ${PORT}`);
 });
