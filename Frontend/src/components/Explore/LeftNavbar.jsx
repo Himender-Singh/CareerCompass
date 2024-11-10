@@ -51,7 +51,7 @@ const LeftNavbar = () => {
 
   const logoutHandler = async () => {
     try {
-      const res = await axios.get('https://careercompass-1-sq77.onrender.com/user/logout', {
+      const res = await axios.get('https://careercompass-1-sq77.onrender.com/api/v1/user/logout', {
         withCredentials: true,
       });
       if (res.data.success) {

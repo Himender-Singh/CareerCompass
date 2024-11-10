@@ -35,7 +35,7 @@ const Profile = () => {
     const followAndUnfollowHandler = async () => {
         try {
             axios.defaults.withCredentials = true;
-            const res = await axios.post(`https://careercompass-1-sq77.onrender.com/user/followorunfollow/${userProfile?._id}`, { userId: user?._id });
+            const res = await axios.post(`https://careercompass-1-sq77.onrender.com/api/v1/user/followorunfollow/${userProfile?._id}`, { userId: user?._id });
             dispatch(followingUpdate(userProfile?._id)); // Update the following state in Redux
             toast.success(res.data.message);
         } catch (error) {

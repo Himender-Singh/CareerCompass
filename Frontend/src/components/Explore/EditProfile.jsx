@@ -64,7 +64,7 @@ const EditProfile = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://careercompass-1-sq77.onrender.com/user/profile/edit",
+        "https://careercompass-1-sq77.onrender.com/api/v1/user/profile/edit",
         formData,
         {
           headers: {

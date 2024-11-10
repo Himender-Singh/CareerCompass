@@ -40,7 +40,7 @@ const Create = ({ open, setOpen }) => {
     if (file) formData.append("image", file);
     try {
       setLoading(true);
-      const res = await axios.post('https://careercompass-1-sq77.onrender.com/post/addpost', formData, {
+      const res = await axios.post('https://careercompass-1-sq77.onrender.com/api/v1/post/addpost', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },
